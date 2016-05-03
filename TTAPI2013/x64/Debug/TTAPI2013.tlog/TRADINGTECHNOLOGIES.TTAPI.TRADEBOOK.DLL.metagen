@@ -1,0 +1,943 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly TradingTechnologies.TTAPI.Tradebook, Version=7.17.59.0, Culture=neutral, PublicKeyToken=423079b15fc884a6: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly TradingTechnologies.TTAPI, Version=7.17.59.0, Culture=neutral, PublicKeyToken=423079b15fc884a6: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly TradingTechnologies.Utils.Enums, Version=7.9.59.4, Culture=neutral, PublicKeyToken=eb3fc33c1c85a812: 
+	hash=None, flags=None
+Class TradingTechnologies.TTAPI.ProductLookupSubscriptionEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.Exception, TradingTechnologies.TTAPI.Product, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.Product Product 'get set' : 
+    System.Exception Error 'get set' : 
+    Boolean IsFinal 'get set' : 
+  Methods:
+    get_Product(): PrivateScope, Public, HideBySig, SpecialName
+    get_Error(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFinal(): PrivateScope, Public, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.ProductLookupSubscription: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Subscription
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.ProductKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Exception Error 'get set' : 
+    TradingTechnologies.TTAPI.Product Product 'get set' : 
+  Events:
+    System.EventHandler`1[TradingTechnologies.TTAPI.ProductLookupSubscriptionEventArgs] Update: 
+  Methods:
+    add_Update(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_Update(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    get_Error(): PrivateScope, Public, HideBySig, SpecialName
+    get_Product(): PrivateScope, Public, HideBySig, SpecialName
+Class TradingTechnologies.Utils.RunTimeChecks: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    CheckForNullArgument(Object, String): PrivateScope, Assembly, Static, HideBySig
+Class TradingTechnologies.TTAPI.EventHelper: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    Fire(Session, EventHandler, Object, EventArgs): PrivateScope, Public, Static, HideBySig
+    Fire(Session, Dispatcher, EventHandler, Object, EventArgs): PrivateScope, Public, Static, HideBySig
+    Fire(Session, EventHandler`1, Object, TEventArgs): PrivateScope, Public, Static, HideBySig
+    Fire(Session, Dispatcher, EventHandler`1, Object, TEventArgs): PrivateScope, Public, Static, HideBySig
+Class TradingTechnologies.TTAPI.QuantityCalculator: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(TradingTechnologies.TTAPI.InstrumentDetails): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.QuantityDisplayFormat DisplayFormat 'get set' : 
+    TradingTechnologies.TTAPI.InstrumentDetails InstrumentDetails 'get set' : 
+    TradingTechnologies.TTAPI.Quantity Quantity 'get set' : 
+    TradingTechnologies.TTAPI.Rounding Rounding 'get set' : 
+  Methods:
+    get_DisplayFormat(): PrivateScope, Public, HideBySig, SpecialName
+    set_DisplayFormat(QuantityDisplayFormat): PrivateScope, Public, HideBySig, SpecialName
+    SetDisplayFormat(QuantityDisplayFormat): PrivateScope, Public, HideBySig
+    get_InstrumentDetails(): PrivateScope, Public, HideBySig, SpecialName
+    set_InstrumentDetails(InstrumentDetails): PrivateScope, Public, HideBySig, SpecialName
+    SetInstrumentDetails(InstrumentDetails): PrivateScope, Public, HideBySig
+    GetInstrumentDetails(): PrivateScope, Public, HideBySig
+    SetQuantityAsInt(Int32): PrivateScope, Public, HideBySig
+    SetQuantityAsFlow(Int32): PrivateScope, Public, HideBySig
+    SetQuantityAsString(String): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    get_Quantity(): PrivateScope, Public, HideBySig, SpecialName
+    set_Quantity(Quantity): PrivateScope, Public, HideBySig, SpecialName
+    SetQuantity(Quantity): PrivateScope, Public, HideBySig
+    GetQuantity(): PrivateScope, Public, HideBySig
+    GetQuantityAsInt(): PrivateScope, Public, HideBySig
+    GetQuantityAsFlow(): PrivateScope, Public, HideBySig
+    GetQuantityAsString(): PrivateScope, Public, HideBySig
+    AddQuantityAsInt(Int32): PrivateScope, Public, HideBySig
+    AddQuantityAsFlow(Int32): PrivateScope, Public, HideBySig
+    AddQuantityAsString(String): PrivateScope, Public, HideBySig
+    SubQuantityAsInt(Int32): PrivateScope, Public, HideBySig
+    SubQuantityAsFlow(Int32): PrivateScope, Public, HideBySig
+    SubQuantityAsString(String): PrivateScope, Public, HideBySig
+    MulQuantityAsInt(Int32): PrivateScope, Public, HideBySig
+    MulQuantityAsFlow(Int32): PrivateScope, Public, HideBySig
+    MulQuantityAsString(String): PrivateScope, Public, HideBySig
+    DivQuantityAsInt(Int32): PrivateScope, Public, HideBySig
+    DivQuantityAsFlow(Int32): PrivateScope, Public, HideBySig
+    DivQuantityAsString(String): PrivateScope, Public, HideBySig
+    Scale(Double): PrivateScope, Public, HideBySig
+    Offset(Int32): PrivateScope, Public, HideBySig
+    get_Rounding(): PrivateScope, Public, HideBySig, SpecialName
+    set_Rounding(Rounding): PrivateScope, Public, HideBySig, SpecialName
+    SetRounding(Rounding): PrivateScope, Public, HideBySig
+    IsValidQuantity(): PrivateScope, Public, HideBySig
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Object Tag : Public
+  Properties:
+    Boolean Negates 'get set' : 
+    System.String Name 'get set' : 
+  Methods:
+    get_Negates(): PrivateScope, Public, HideBySig, SpecialName
+    set_Negates(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    IsMatch(Order): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsMatch(Fill): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Clone(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsEqual(TradeSubscriptionFilter): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    PassFilter(Order): PrivateScope, Assembly, HideBySig
+    PassFilter(Fill): PrivateScope, Assembly, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+Class TradingTechnologies.TTAPI.PriceCalculator: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(TradingTechnologies.TTAPI.InstrumentDetails): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.InstrumentDetails InstrumentDetails 'get set' : 
+    TradingTechnologies.TTAPI.Price Price 'get set' : 
+    Boolean IsValidPrice 'get ' : 
+    Int32 Precision 'get set' : 
+    Int32 Decimals 'get set' : 
+  Methods:
+    get_InstrumentDetails(): PrivateScope, Public, HideBySig, SpecialName
+    set_InstrumentDetails(InstrumentDetails): PrivateScope, Public, HideBySig, SpecialName
+    SetInstrumentDetails(InstrumentDetails): PrivateScope, Public, HideBySig
+    GetInstrumentDetails(): PrivateScope, Public, HideBySig
+    get_Price(): PrivateScope, Public, HideBySig, SpecialName
+    set_Price(Price): PrivateScope, Public, HideBySig, SpecialName
+    GetPrice(): PrivateScope, Public, HideBySig
+    SetPrice(Price): PrivateScope, Public, HideBySig
+    GetPriceAsString(): PrivateScope, Public, HideBySig
+    GetPriceAsInt(): PrivateScope, Public, HideBySig
+    GetPriceAsTicks(): PrivateScope, Public, HideBySig
+    GetPriceAsDouble(): PrivateScope, Public, HideBySig
+    get_IsValidPrice(): PrivateScope, Public, HideBySig, SpecialName
+    Reset(): PrivateScope, Public, HideBySig
+    SetPriceAsInt(Int32): PrivateScope, Public, HideBySig
+    SetPriceAsDouble(Double): PrivateScope, Public, HideBySig
+    SetPriceAsString(String): PrivateScope, Public, HideBySig
+    SetPriceAsTicks(Int32): PrivateScope, Public, HideBySig
+    AddPriceAsInt(Int32): PrivateScope, Public, HideBySig
+    AddPriceAsDouble(Double): PrivateScope, Public, HideBySig
+    AddPriceAsString(String): PrivateScope, Public, HideBySig
+    AddPriceAsTicks(Int32): PrivateScope, Public, HideBySig
+    SubPriceAsInt(Int32): PrivateScope, Public, HideBySig
+    SubPriceAsDouble(Double): PrivateScope, Public, HideBySig
+    SubPriceAsString(String): PrivateScope, Public, HideBySig
+    SubPriceAsTicks(Int32): PrivateScope, Public, HideBySig
+    MulPriceAsInt(Int32): PrivateScope, Public, HideBySig
+    MulPriceAsDouble(Double): PrivateScope, Public, HideBySig
+    MulPriceAsString(String): PrivateScope, Public, HideBySig
+    MulPriceAsTicks(Int32): PrivateScope, Public, HideBySig
+    DivPriceAsInt(Int32): PrivateScope, Public, HideBySig
+    DivPriceAsDouble(Double): PrivateScope, Public, HideBySig
+    DivPriceAsString(String): PrivateScope, Public, HideBySig
+    DivPriceAsTicks(Int32): PrivateScope, Public, HideBySig
+    Scale(Double): PrivateScope, Public, HideBySig
+    Offset(Int32): PrivateScope, Public, HideBySig
+    SetRounding(Rounding): PrivateScope, Public, HideBySig
+    GetRounding(): PrivateScope, Public, HideBySig
+    GetPrecision(): PrivateScope, Public, HideBySig
+    GetDecimals(): PrivateScope, Public, HideBySig
+    SetPrecision(Int32): PrivateScope, Public, HideBySig
+    SetDecimals(Int32): PrivateScope, Public, HideBySig
+    get_Precision(): PrivateScope, Public, HideBySig, SpecialName
+    set_Precision(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Decimals(): PrivateScope, Public, HideBySig, SpecialName
+    set_Decimals(Int32): PrivateScope, Public, HideBySig, SpecialName
+    SetDefaultPrecision(): PrivateScope, Public, HideBySig
+    SetDefaultDecimals(): PrivateScope, Public, HideBySig
+    GetTradeableTickValue(Int32): PrivateScope, Public, HideBySig
+    GetTickPrice(Int32): PrivateScope, Public, HideBySig
+Class TradingTechnologies.TTAPI.Tradebook.Trade: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(TradingTechnologies.TTAPI.Order): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.TradeState State 'get ' : 
+    Double AverageFillPrice 'get ' : 
+    Int32 TotalFilledQuantity 'get ' : 
+    Int32 LastFilledQuantity 'get ' : 
+    Double TotalCost 'get ' : 
+    TradingTechnologies.TTAPI.Order CurrentOrder 'get ' : 
+    System.Collections.Generic.IList`1[TradingTechnologies.TTAPI.Fill] Fills 'get ' : 
+    Boolean InCancelReplace 'get set' : 
+    Boolean Arrived 'get ' : 
+    System.Collections.Generic.IList`1[TradingTechnologies.TTAPI.Tradebook.Trade] ChildTrades 'get ' : 
+  Methods:
+    get_State(): PrivateScope, Public, HideBySig, SpecialName
+    get_AverageFillPrice(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalFilledQuantity(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastFilledQuantity(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalCost(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentOrder(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fills(): PrivateScope, Public, HideBySig, SpecialName
+    get_InCancelReplace(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_InCancelReplace(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Arrived(): PrivateScope, Assembly, HideBySig, SpecialName
+    OrderArrived(Order): PrivateScope, Assembly, HideBySig
+    OrderUpdated(Order): PrivateScope, Assembly, HideBySig
+    OrderDeleted(Order, Boolean): PrivateScope, Assembly, HideBySig
+    OrderFilled(Order, Fill): PrivateScope, Assembly, HideBySig
+    RemoveChild(Trade): PrivateScope, Assembly, HideBySig
+    AddChild(Trade): PrivateScope, Assembly, HideBySig
+    FillAdded(Fill): PrivateScope, Assembly, HideBySig
+    FillDeleted(Fill): PrivateScope, Assembly, HideBySig
+    FillAmended(Fill, Fill): PrivateScope, Assembly, HideBySig
+    get_ChildTrades(): PrivateScope, Public, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Internal.MarketImpl: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Market
+    Void .ctor(TradingTechnologies.TTAPI.MarketCatalog, TradingTechnologies.TTAPI.MarketKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Concurrent.ConcurrentDictionary`2[TradingTechnologies.TTAPI.FeedConnectionKey,TradingTechnologies.TTAPI.PriceFeed] m_PriceFeeds : Assembly, InitOnly
+    System.Collections.Concurrent.ConcurrentDictionary`2[TradingTechnologies.TTAPI.FeedConnectionKey,TradingTechnologies.TTAPI.FillFeed] m_FillFeeds : Assembly, InitOnly
+    System.Collections.Concurrent.ConcurrentDictionary`2[TradingTechnologies.TTAPI.FeedConnectionKey,TradingTechnologies.TTAPI.OrderFeed] m_OrderFeeds : Assembly, InitOnly
+  Properties:
+    System.Collections.Generic.IDictionary`2[TradingTechnologies.TTAPI.FeedConnectionKey,TradingTechnologies.TTAPI.PriceFeed] PriceFeeds 'get ' : 
+    System.Collections.Generic.IDictionary`2[TradingTechnologies.TTAPI.FeedConnectionKey,TradingTechnologies.TTAPI.OrderFeed] OrderFeeds 'get ' : 
+    System.Collections.Generic.IDictionary`2[TradingTechnologies.TTAPI.FeedConnectionKey,TradingTechnologies.TTAPI.FillFeed] FillFeeds 'get ' : 
+    System.Collections.Generic.IEnumerable`1[TradingTechnologies.TTAPI.ProductType] SupportedProductTypes 'get ' : 
+  Methods:
+    get_PriceFeeds(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_OrderFeeds(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_FillFeeds(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_SupportedProductTypes(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    CreateProductCatalogSubscription(Dispatcher): PrivateScope, Public, Virtual, HideBySig
+    UpdateGatewayFeedStatus(InternalFeedConnectionKey, FeedStatus): PrivateScope, Assembly, HideBySig
+    GetOrderFeedForConnectionKey(FeedConnectionKey): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    GetFillFeedForConnectionKey(FeedConnectionKey): PrivateScope, Assembly, HideBySig
+    GetPriceFeedForConnectionKey(FeedConnectionKey): PrivateScope, Assembly, HideBySig
+    GetAnyOrderFeedForGateway(GatewayKey): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    GetOrderFeedForGateway(GatewayKey): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    GetFillFeedForGateway(GatewayKey): PrivateScope, Assembly, HideBySig
+    GetPriceFeedForGateway(GatewayKey): PrivateScope, Assembly, HideBySig
+    createSharedInstrSub(Product): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    GetSharedInstrumentsSubscriptionForProduct(Product): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    ClearAllFeeds(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+Class TradingTechnologies.TTAPI.Internal.FeedStatusExtensions: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    ToFeedStatus(ServerStatus): PrivateScope, Public, Static, HideBySig
+Class TradingTechnologies.TTAPI.Internal.LocalAutospreaderEngineOrderFeed: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :TradingTechnologies.TTAPI.OrderFeed
+    Void .ctor(TradingTechnologies.TTAPI.Market, TradingTechnologies.TTAPI.FeedConnectionKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.FeedStatus Status 'get set' : 
+    Boolean IsTradingEnabled 'get ' : 
+  Methods:
+    get_Status(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Status(FeedStatus): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride, SpecialName
+    get_IsTradingEnabled(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionCompoundFilter: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter
+    Void .ctor(Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.List`1[TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter] Filters 'get ' : 
+    System.Collections.Generic.List`1[TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter] LeafFilters 'get ' : 
+  Methods:
+    AddFilter(TradeSubscriptionFilter): PrivateScope, Public, HideBySig
+    Validate(): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    RemoveFilter(TradeSubscriptionFilter): PrivateScope, Public, HideBySig
+    IsEqual(TradeSubscriptionFilter): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    get_Filters(): PrivateScope, Public, HideBySig, SpecialName
+    get_LeafFilters(): PrivateScope, Public, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Internal.MarketCatalogImpl: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :TradingTechnologies.TTAPI.MarketCatalog
+    Void .ctor(TradingTechnologies.TTAPI.Session): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.IDictionary`2[TradingTechnologies.TTAPI.MarketKey,TradingTechnologies.TTAPI.Market] Markets 'get ' : 
+    System.Collections.Generic.IEnumerable`1[TradingTechnologies.TTAPI.FillFeed] FillFeeds 'get ' : 
+    System.Collections.Generic.IEnumerable`1[TradingTechnologies.TTAPI.OrderFeed] OrderFeeds 'get ' : 
+    System.Collections.Generic.IEnumerable`1[TradingTechnologies.TTAPI.PriceFeed] PriceFeeds 'get ' : 
+    TradingTechnologies.TTAPI.OrderFeed LocalAutospreaderEngineOrderFeed 'get ' : 
+    TradingTechnologies.TTAPI.Product AutospreaderProduct 'get ' : 
+  Methods:
+    AddAutospreaderMarket(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    Start(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    get_Markets(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_FillFeeds(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_OrderFeeds(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_PriceFeeds(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    GetOrCreateMarket(MarketKey): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    getOrCreateOrderFeedFromAllOrderFeedsCollection(FeedConnectionKey, Market): PrivateScope, Assembly, HideBySig
+    GetFillFeed(FeedConnectionKey): PrivateScope, Public, Virtual, HideBySig
+    GetPriceFeed(FeedConnectionKey): PrivateScope, Public, Virtual, HideBySig
+    get_LocalAutospreaderEngineOrderFeed(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_AutospreaderProduct(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride, SpecialName
+    ConnectionReadyChanged(ConnectionTradingEnabledChangedEventArgs): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    TraderLimitUpdated(TraderLimitUpdatedEventArgs): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    UserLimitUpdated(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    GetOrderFeed(FeedConnectionKey): PrivateScope, Public, Virtual, HideBySig
+    GetAnyOrderFeedForGatewayKey(GatewayKey): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    GetOrderFeed(Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    PrintAllFeeds(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    ClearAllFeeds(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    PopulateReadyConnectionsFromOFH(IDictionary`2): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionResetEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(TradeSubscriptionResetReason): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    TradeSubscriptionResetReason ResetReason : Public
+Struct TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionResetEventArgs+TradeSubscriptionResetReason: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    TradeSubscriptionResetReason FilterAdded = 0 : Public, Static, Literal, HasDefault
+    TradeSubscriptionResetReason FilterRemoved = 1 : Public, Static, Literal, HasDefault
+    TradeSubscriptionResetReason Rollover = 2 : Public, Static, Literal, HasDefault
+    TradeSubscriptionResetReason ProfitLossEnableStatusChanged = 3 : Public, Static, Literal, HasDefault
+    TradeSubscriptionResetReason TrackTradesStatusChanged = 4 : Public, Static, Literal, HasDefault
+    TradeSubscriptionResetReason PositionReserveStatusChanged = 5 : Public, Static, Literal, HasDefault
+Interface TradingTechnologies.TTAPI.Tradebook.INoneFilterOrderFillTrackerObserver: AutoLayout, AnsiClass, Class, ClassSemanticsMask, Abstract
+  Methods:
+    OnOrderAdded(Order, String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderBookDownload(IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderUpdated(Order, Order, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderDeleted(Order, Order, String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderFilled(Order, Order, Fill, FillType, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderRejected(Order, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderStatusUnknown(Order, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderWorkupOwnerUpdated(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderFillTrackerResetOrdersSnapshot(ICollection`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnUnmatchedFill(Fill): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnFillBookDownload(IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderFillTrackerResetFillsSnapshot(ICollection`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnFillAdded(Fill): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnFillDeleted(Fill): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnFillListEnd(FeedConnectionKey): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnFillListStart(FeedConnectionKey): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnFillAmended(FillUpdateFlag, Fill, Fill): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnRollover(FeedConnectionKey, Int32, IList`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnConfirmFillFailed(Fill, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnOrderTimeout(Order): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class TradingTechnologies.TTAPI.Tradebook.Tradebook: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, Boolean, Boolean, Boolean, Boolean, TradingTechnologies.TTAPI.Tradebook.TradeSubscription): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    TradingTechnologies.TTAPI.Tradebook.INoneFilterOrderFillTrackerObserver
+    System.IDisposable
+    TradingTechnologies.TTAPI.IFillSubscriptionObserver
+    TradingTechnologies.TTAPI.IOrderSubscriptionObserver
+    TradingTechnologies.TTAPI.IProfitLoss
+  Properties:
+    Boolean EnablePNL 'get set' : 
+    Boolean OwnOrdersOnly 'get ' : 
+    Boolean TrackTrade 'get set' : 
+    Boolean IncludePositionReserve 'get set' : 
+    TradingTechnologies.TTAPI.OpenProfitLossMode OpenProfitLossMode 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossCalculationType CalculationType 'get set' : 
+    Int32 BuyWorking 'get ' : 
+    Int32 SellWorking 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossValue ProfitLoss 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossValue OpenProfitLoss 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossValue RealizedProfitLoss 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossStatistics ProfitLossStatistics 'get ' : 
+    TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter Filter 'get ' : 
+    System.Collections.Generic.IDictionary`2[System.String,TradingTechnologies.TTAPI.Order] Orders 'get ' : 
+    System.Collections.Generic.IDictionary`2[System.String,TradingTechnologies.TTAPI.Fill] Fills 'get ' : 
+  Methods:
+    BeforeSendOrder(SendOrderEventArgs): PrivateScope, Assembly, HideBySig
+    AfterSendOrder(SendOrderEventArgs): PrivateScope, Assembly, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    AddSiteOrderKey(String): PrivateScope, Public, HideBySig
+    get_EnablePNL(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_EnablePNL(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_OwnOrdersOnly(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_TrackTrade(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_TrackTrade(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IncludePositionReserve(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_IncludePositionReserve(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_OpenProfitLossMode(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_CalculationType(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_CalculationType(ProfitLossCalculationType): PrivateScope, Assembly, HideBySig, SpecialName
+    get_BuyWorking(): PrivateScope, Public, HideBySig, SpecialName
+    get_SellWorking(): PrivateScope, Public, HideBySig, SpecialName
+    get_ProfitLoss(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_OpenProfitLoss(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_RealizedProfitLoss(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_ProfitLossStatistics(): PrivateScope, Public, HideBySig, SpecialName
+    Open(): PrivateScope, Assembly, HideBySig
+    Close(): PrivateScope, Assembly, HideBySig
+    get_Filter(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Orders(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Fills(): PrivateScope, Assembly, HideBySig, SpecialName
+    GetTrades(): PrivateScope, Assembly, HideBySig
+    GetTrade(String): PrivateScope, Assembly, HideBySig
+    SetFilter(TradeSubscriptionFilter): PrivateScope, Assembly, HideBySig
+    ClearFilter(): PrivateScope, Assembly, HideBySig
+    PassFilterInternal(Order): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+Class TradingTechnologies.TTAPI.Tradebook.InstrumentKeyExtensions: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    IsAutospreaderSpread(InstrumentKey): PrivateScope, Public, Static, HideBySig
+Class TradingTechnologies.TTAPI.Internal.InternalInstrumentLookupSubscription: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(TradingTechnologies.TTAPI.Internal.InstrumentLookupSubscriptionManagerImpl): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.InstrumentLookupSubscription InstrumentLookupSubscription 'get ' : 
+    TradingTechnologies.TTAPI.Session Session 'get ' : 
+    TradingTechnologies.TTAPI.Dispatcher Dispatcher 'get ' : 
+    TradingTechnologies.TTAPI.ProductKey ProductKey 'get ' : 
+    System.String InstrumentNameOrSeriesKey 'get ' : 
+    Boolean IsByName 'get ' : 
+  Methods:
+    get_InstrumentLookupSubscription(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Session(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_Dispatcher(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_ProductKey(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_InstrumentNameOrSeriesKey(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsByName(): PrivateScope, Assembly, HideBySig, SpecialName
+    AddSubscription(InstrumentLookupSubscription): PrivateScope, Assembly, HideBySig
+    RemoveSubscription(InstrumentLookupSubscription): PrivateScope, Assembly, HideBySig
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscription: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.DispatcherBoundSubscription
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, Boolean, Boolean, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    TradingTechnologies.TTAPI.ISendOrderBeforeAfterNotify
+  Fields:
+    TradingTechnologies.TTAPI.Tradebook.Tradebook m_tradeBook : Assembly
+  Properties:
+    System.String LogId 'get set' : 
+    Boolean IsDisposed 'get ' : 
+    Boolean EnablePNL 'get set' : 
+    Boolean OwnOrdersOnly 'get ' : 
+    Boolean TrackTrade 'get set' : 
+    Boolean IncludePositionReserve 'get set' : 
+    TradingTechnologies.TTAPI.ProfitLossCalculationType CalculationType 'get set' : 
+    TradingTechnologies.TTAPI.ProfitLossValue ProfitLoss 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossValue OpenProfitLoss 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossValue RealizedProfitLoss 'get ' : 
+    TradingTechnologies.TTAPI.ProfitLossStatistics ProfitLossStatistics 'get ' : 
+    TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter Filter 'get ' : 
+    System.Collections.Generic.IDictionary`2[System.String,TradingTechnologies.TTAPI.Order] Orders 'get ' : 
+    Int32 BuyWorking 'get ' : 
+    Int32 SellWorking 'get ' : 
+    System.Collections.Generic.IDictionary`2[System.String,TradingTechnologies.TTAPI.Fill] Fills 'get ' : 
+  Events:
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderAddedEventArgs] OrderAdded: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderDeletedEventArgs] OrderDeleted: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderFilledEventArgs] OrderFilled: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderRejectedEventArgs] OrderRejected: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderUpdatedEventArgs] OrderUpdated: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderStatusUnknownEventArgs] OrderStatusUnknown: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderBookDownloadEventArgs] OrderBookDownload: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.WorkupOwnerUpdatedEventArgs] WorkupOwnerUpdated: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.OrderTimeoutEventArgs] OrderTimeout: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.ConfirmFillFailedEventArgs] ConfirmFillFailed: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.FillAddedEventArgs] AdminFillAdded: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.FillDeletedEventArgs] AdminFillDeleted: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.FillAmendedEventArgs] FillAmended: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.FillBookDownloadEventArgs] FillBookDownload: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.FillListEventArgs] FillListStart: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.FillListEventArgs] FillListEnd: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.RolloverEventArgs] Rollover: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.FillAddedEventArgs] FillRecordAdded: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionResetEventArgs] TradeSubscriptionReset: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.Tradebook.ProfitLossChangedEventArgs] ProfitLossChanged: 
+  Methods:
+    FillBookDownloadHandler(List`1): PrivateScope, Assembly, HideBySig
+    FillAmendedHandler(FillUpdateFlag, Fill, Fill): PrivateScope, Assembly, HideBySig
+    FillDeletedHandler(Fill): PrivateScope, Assembly, HideBySig
+    UnmatchedFill(Fill): PrivateScope, Assembly, HideBySig
+    FillAddedHandler(Fill): PrivateScope, Assembly, HideBySig
+    OrderUpdatedHandler(Order, Order, String): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OrderStatusUnknownHandler(Order, String): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OrderRejectedHandler(Order, String): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OrderBookDownloadHandler(IList`1): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OrderFilledHandler(Order, Order, Fill, FillType, String): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OrderDeletedHandler(Order, Order, String, Boolean): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OrderAddedHandler(Order, String, Boolean): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    WorkupOwnerUpdatedHandler(Order, Boolean): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OrderTimeoutHandler(Order): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    OnConfirmFillFailed(Fill, String): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    DeleteAll(): PrivateScope, Public, HideBySig
+    DeleteBySide(BuySell): PrivateScope, Public, HideBySig
+    HoldAll(): PrivateScope, Public, HideBySig
+    RemoveAllFromHold(): PrivateScope, Public, HideBySig
+    InquireAll(): PrivateScope, Public, HideBySig
+    add_OrderAdded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderAdded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_OrderDeleted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderDeleted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_OrderFilled(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderFilled(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_OrderRejected(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderRejected(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_OrderUpdated(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderUpdated(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_OrderStatusUnknown(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderStatusUnknown(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_OrderBookDownload(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderBookDownload(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_WorkupOwnerUpdated(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_WorkupOwnerUpdated(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_OrderTimeout(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_OrderTimeout(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_ConfirmFillFailed(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_ConfirmFillFailed(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_AdminFillAdded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_AdminFillAdded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_AdminFillDeleted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_AdminFillDeleted(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_FillAmended(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_FillAmended(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_FillBookDownload(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_FillBookDownload(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_FillListStart(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_FillListStart(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_FillListEnd(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_FillListEnd(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_Rollover(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_Rollover(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_FillRecordAdded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_FillRecordAdded(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_TradeSubscriptionReset(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_TradeSubscriptionReset(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_ProfitLossChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProfitLossChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    get_LogId(): PrivateScope, Assembly, HideBySig, SpecialName
+    set_LogId(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsDisposed(): PrivateScope, Public, HideBySig, SpecialName
+    get_EnablePNL(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnablePNL(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_OwnOrdersOnly(): PrivateScope, Public, HideBySig, SpecialName
+    get_TrackTrade(): PrivateScope, Public, HideBySig, SpecialName
+    set_TrackTrade(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IncludePositionReserve(): PrivateScope, Public, HideBySig, SpecialName
+    set_IncludePositionReserve(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CalculationType(): PrivateScope, Public, HideBySig, SpecialName
+    set_CalculationType(ProfitLossCalculationType): PrivateScope, Public, HideBySig, SpecialName
+    get_ProfitLoss(): PrivateScope, Public, HideBySig, SpecialName
+    get_OpenProfitLoss(): PrivateScope, Public, HideBySig, SpecialName
+    get_RealizedProfitLoss(): PrivateScope, Public, HideBySig, SpecialName
+    get_ProfitLossStatistics(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetTrades(): PrivateScope, Public, HideBySig
+    GetTrade(String): PrivateScope, Public, HideBySig
+    get_Filter(): PrivateScope, Public, HideBySig, SpecialName
+    get_Orders(): PrivateScope, Public, HideBySig, SpecialName
+    get_BuyWorking(): PrivateScope, Public, HideBySig, SpecialName
+    get_SellWorking(): PrivateScope, Public, HideBySig, SpecialName
+    get_Fills(): PrivateScope, Public, HideBySig, SpecialName
+    SetFilter(TradeSubscriptionFilter): PrivateScope, Public, HideBySig
+    ClearFilter(): PrivateScope, Public, HideBySig
+    AddSiteOrderKey(String): PrivateScope, Assembly, HideBySig
+    SendOrder(OrderProfileBase): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SendOrder(OrderProfileBase, Boolean, Boolean): PrivateScope, Assembly, HideBySig
+    SendOrder(IEnumerable`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SendOrder(IEnumerable`1, Boolean, Boolean): PrivateScope, Assembly, HideBySig
+    PassFilterInternal(Order): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    PassFilterInternal(Fill): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    RemoveNetPosition(Fill): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    AddNetPosition(Fill): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    AddNetPosition(IEnumerable`1): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    UpdateNetPosition(Fill, Fill): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    EnablePNLChanged(Boolean): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    AddFillToProfitLossCalculation(Fill): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    SupportAsPrimary(): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    SupportAsNative(): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    SupportAsQtyTimePrice(): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    SupportAsTicks(): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    RolloverHandler(RolloverEventArgs): PrivateScope, Assembly, HideBySig
+    ProfitLossChangedHandler(): PrivateScope, Assembly, HideBySig
+    TradeSubscriptionResetHandler(TradeSubscriptionResetEventArgs): PrivateScope, Assembly, Virtual, HideBySig, VtableLayoutMask, CheckAccessOnOverride
+    FillListStartHandler(FeedConnectionKey): PrivateScope, Assembly, HideBySig
+    FillListEndHandler(FeedConnectionKey): PrivateScope, Assembly, HideBySig
+Class TradingTechnologies.TTAPI.Tradebook.InstrumentTradeSubscription: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.TradeSubscription
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.Instrument): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.Instrument, Boolean, Boolean, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.Instrument Instrument 'get ' : 
+  Methods:
+    PassFilterInternal(Order): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    PassFilterInternal(Fill): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    ModifyPrice(Price): PrivateScope, Public, HideBySig
+    ModifyQuantity(Quantity): PrivateScope, Public, HideBySig
+    ModifyPriceAndQuantity(Price, Quantity): PrivateScope, Public, HideBySig
+    Move(Int32): PrivateScope, Public, HideBySig
+    SupportAsPrimary(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    SupportAsNative(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    SupportAsQtyTimePrice(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    SupportAsTicks(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    AddFillToProfitLossCalculation(Fill): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    get_Instrument(): PrivateScope, Public, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Tradebook.ASInstrumentTradeSubscription: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.InstrumentTradeSubscription
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.AutospreaderInstrument): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.AutospreaderInstrument, Boolean, Boolean, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.ProfitLossStatistics ProfitLossStatistics 'get ' : 
+  Events:
+    System.EventHandler`1[TradingTechnologies.TTAPI.Autospreader.TradableStatusChangedEventArgs] TradableStatusChanged: 
+    System.EventHandler`1[TradingTechnologies.TTAPI.Autospreader.ConnectionDataChangedEventArgs] ConnectionDataChanged: 
+  Methods:
+    add_TradableStatusChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_TradableStatusChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    add_ConnectionDataChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_ConnectionDataChanged(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    SupportAsPrimary(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    SupportAsNative(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    SupportAsQtyTimePrice(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    SupportAsTicks(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    PassFilterInternal(Order): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    PassFilterInternal(Fill): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    get_ProfitLossStatistics(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    TradeSubscriptionResetHandler(TradeSubscriptionResetEventArgs): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    EnablePNLChanged(Boolean): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    AddNetPosition(Fill): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    AddNetPosition(IEnumerable`1): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    RemoveNetPosition(Fill): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    UpdateNetPosition(Fill, Fill): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    AddFillToProfitLossCalculation(Fill): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionAndFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionCompoundFilter
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    IsMatch(Order): PrivateScope, Public, Virtual, HideBySig
+    IsMatch(Fill): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+    Validate(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionAccountFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter
+    Void .ctor(System.String, Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Account 'get ' : 
+  Methods:
+    get_Account(): PrivateScope, Public, HideBySig, SpecialName
+    IsEqual(TradeSubscriptionFilter): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    IsMatch(Order): PrivateScope, Public, Virtual, HideBySig
+    IsMatch(Fill): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+Class TradingTechnologies.TTAPI.Tradebook.ProfitLossChangedEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(TradingTechnologies.TTAPI.Tradebook.TradeSubscription): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.Tradebook.TradeSubscription TradeSubscription 'get set' : 
+  Methods:
+    get_TradeSubscription(): PrivateScope, Public, HideBySig, SpecialName
+    set_TradeSubscription(TradeSubscription): PrivateScope, Assembly, HideBySig, SpecialName
+Struct TradingTechnologies.TTAPI.RequestInfo: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Properties:
+    Boolean IsByName 'get set' : 
+    System.String InstrumentNameOrSeriesKey 'get set' : 
+    TradingTechnologies.TTAPI.InstrumentKey InstrumentKey 'get set' : 
+    TradingTechnologies.TTAPI.ProductKey ProductKey 'get set' : 
+  Methods:
+    get_IsByName(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsByName(Boolean): PrivateScope, Assembly, HideBySig, SpecialName
+    get_InstrumentNameOrSeriesKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_InstrumentNameOrSeriesKey(String): PrivateScope, Assembly, HideBySig, SpecialName
+    get_InstrumentKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_InstrumentKey(InstrumentKey): PrivateScope, Assembly, HideBySig, SpecialName
+    get_ProductKey(): PrivateScope, Public, HideBySig, SpecialName
+    set_ProductKey(ProductKey): PrivateScope, Assembly, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.InstrumentLookupSubscriptionEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(System.Exception, TradingTechnologies.TTAPI.Instrument, TradingTechnologies.TTAPI.RequestInfo, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.Instrument Instrument 'get set' : 
+    System.Exception Error 'get set' : 
+    Boolean IsFinal 'get set' : 
+    TradingTechnologies.TTAPI.RequestInfo RequestInfo 'get set' : 
+  Methods:
+    get_Instrument(): PrivateScope, Public, HideBySig, SpecialName
+    get_Error(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsFinal(): PrivateScope, Public, HideBySig, SpecialName
+    get_RequestInfo(): PrivateScope, Public, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.InstrumentLookupSubscription: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Subscription
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.InstrumentKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.InstrumentKey, Boolean): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.ProductKey, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.Dispatcher, TradingTechnologies.TTAPI.ProductKey, System.String, Boolean): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Exception Error 'get set' : 
+    TradingTechnologies.TTAPI.Instrument Instrument 'get set' : 
+    TradingTechnologies.TTAPI.InstrumentKey InstrumentKey 'get ' : 
+    Boolean IsByName 'get ' : 
+    TradingTechnologies.TTAPI.ProductKey ProductKey 'get ' : 
+    System.String InstrumentNameOrSeriesKey 'get ' : 
+    Boolean ForOTCUse 'get set' : 
+  Events:
+    System.EventHandler`1[TradingTechnologies.TTAPI.InstrumentLookupSubscriptionEventArgs] Update: 
+  Methods:
+    add_Update(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    remove_Update(EventHandler`1): PrivateScope, Public, HideBySig, SpecialName
+    get_Error(): PrivateScope, Public, HideBySig, SpecialName
+    get_Instrument(): PrivateScope, Public, HideBySig, SpecialName
+    get_InstrumentKey(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_IsByName(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_ProductKey(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_InstrumentNameOrSeriesKey(): PrivateScope, Assembly, HideBySig, SpecialName
+    get_ForOTCUse(): PrivateScope, Assembly, HideBySig, SpecialName
+    FindContractNotify(Exception, SharedInstrument, Boolean): PrivateScope, Assembly, HideBySig
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionInstrumentFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter
+    Void .ctor(TradingTechnologies.TTAPI.Session, TradingTechnologies.TTAPI.InstrumentKey, Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.InstrumentKey InstrumentKey 'get ' : 
+    TradingTechnologies.TTAPI.Session Session 'get ' : 
+  Methods:
+    get_InstrumentKey(): PrivateScope, Public, HideBySig, SpecialName
+    get_Session(): PrivateScope, Public, HideBySig, SpecialName
+    IsMatch(Order): PrivateScope, Public, Virtual, HideBySig
+    IsMatch(Fill): PrivateScope, Public, Virtual, HideBySig
+    IsEqual(TradeSubscriptionFilter): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+Class TradingTechnologies.TTAPI.Tradebook.NoneFilteredOrderFillTrackerResetOrdersSnapshotEventArgs: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(TradingTechnologies.TTAPI.DictionaryAdapter`2[System.String,TradingTechnologies.TTAPI.Order]): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.ICollection`1[TradingTechnologies.TTAPI.Order] Orders 'get ' : 
+  Methods:
+    get_Orders(): PrivateScope, Assembly, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Tradebook.NoneFilteredOrderFillTrackerResetFillsSnapshotEventArgs: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(TradingTechnologies.TTAPI.DictionaryAdapter`2[System.String,TradingTechnologies.TTAPI.Fill]): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Collections.Generic.ICollection`1[TradingTechnologies.TTAPI.Fill] Fills 'get ' : 
+  Methods:
+    get_Fills(): PrivateScope, Assembly, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Tradebook.NoneFilteredOrderFillTracker: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+    TradingTechnologies.TTAPI.IOrderSubscriptionObserver
+    TradingTechnologies.TTAPI.IFillSubscriptionObserver
+  Properties:
+    TradingTechnologies.TTAPI.Dispatcher Dispatcher 'get ' : 
+    TradingTechnologies.TTAPI.Session Session 'get ' : 
+  Methods:
+    GetTrackerForCurrentThread(Session): PrivateScope, Public, Static, HideBySig
+    Reset(INoneFilterOrderFillTrackerObserver): PrivateScope, Public, HideBySig
+    AddObserver(INoneFilterOrderFillTrackerObserver): PrivateScope, Public, HideBySig
+    RemoveObserver(INoneFilterOrderFillTrackerObserver): PrivateScope, Public, HideBySig
+    get_Dispatcher(): PrivateScope, Public, HideBySig, SpecialName
+    get_Session(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class TradingTechnologies.Utils.FixedSizeCache`2[TKey,TValue]: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  Type parameter: TKey
+  Type parameter: TValue
+    Void .ctor(Int32, EvictionPolicy): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, EvictionPolicy, System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[TKey,TValue]]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IDictionary`2[TKey,TValue]
+    System.Collections.Generic.ICollection`1[System.Collections.Generic.KeyValuePair`2[TKey,TValue]]
+    System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[TKey,TValue]]
+    System.Collections.IEnumerable
+    System.Collections.Generic.IEnumerable`1[TValue]
+  Properties:
+    Int32 Capacity 'get set' : 
+    EvictionPolicy Policy 'get set' : 
+    TValue MostRecentlyUsed 'get ' : 
+    TValue LeastRecentlyUsed 'get ' : 
+    System.Collections.Generic.ICollection`1[TKey] Keys 'get ' : 
+    TValue Item [TKey] 'get set' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_Capacity(): PrivateScope, Public, HideBySig, SpecialName
+    get_Policy(): PrivateScope, Public, HideBySig, SpecialName
+    get_MostRecentlyUsed(): PrivateScope, Public, HideBySig, SpecialName
+    get_LeastRecentlyUsed(): PrivateScope, Public, HideBySig, SpecialName
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Add(TKey, TValue): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ContainsKey(TKey): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Keys(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Remove(TKey): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    TryGetValue(TKey, TValue&(Out)): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Item(TKey): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Item(TKey, TValue): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Clear(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Struct TradingTechnologies.Utils.FixedSizeCache`2+EvictionPolicy[TKey,TValue]: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  Type parameter: TKey
+  Type parameter: TValue
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EvictionPolicy LRU = 0 : Public, Static, Literal, HasDefault
+    EvictionPolicy MRU = 1 : Public, Static, Literal, HasDefault
+Class TradingTechnologies.Utils.LruFixedSizeCache`2[TKey,TValue]: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  Type parameter: TKey
+  Type parameter: TValue
+  :TradingTechnologies.Utils.FixedSizeCache`2[TKey,TValue]
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[TKey,TValue]]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class TradingTechnologies.Utils.MruFixedSizeCache`2[TKey,TValue]: AutoLayout, AnsiClass, Class, Sealed, BeforeFieldInit
+  Type parameter: TKey
+  Type parameter: TValue
+  :TradingTechnologies.Utils.FixedSizeCache`2[TKey,TValue]
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, System.Collections.Generic.IEnumerable`1[System.Collections.Generic.KeyValuePair`2[TKey,TValue]]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class TradingTechnologies.TTAPI.Tradebook.TradesCollection: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Assembly, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    IsValidChild(Order): PrivateScope, Assembly, HideBySig
+    ProcessAddChildOrder(Trade): PrivateScope, Assembly, HideBySig
+    OrderAdded(Order): PrivateScope, Assembly, HideBySig
+    OrderUpdated(Order): PrivateScope, Assembly, HideBySig
+    OrderDeleted(Order, Boolean): PrivateScope, Assembly, HideBySig
+    OrderFilled(Order, Fill): PrivateScope, Assembly, HideBySig
+    FillDeleted(Fill): PrivateScope, Assembly, HideBySig
+    Rollover(Fill): PrivateScope, Assembly, HideBySig
+    FillAdded(Fill): PrivateScope, Assembly, HideBySig
+    FillAmended(Fill, Fill): PrivateScope, Assembly, HideBySig
+    Clear(): PrivateScope, Assembly, HideBySig
+    GetTrade(String): PrivateScope, Assembly, HideBySig
+    GetTrades(): PrivateScope, Assembly, HideBySig
+Class TradingTechnologies.TTAPI.Internal.AutospreaderMarket: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Internal.MarketImpl
+    Void .ctor(TradingTechnologies.TTAPI.MarketCatalog): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TradingTechnologies.TTAPI.Product AutospreaderProduct 'get set' : 
+    TradingTechnologies.TTAPI.OrderFeed LocalAutospreaderEngineOrderFeed 'get set' : 
+    System.Collections.Generic.IEnumerable`1[TradingTechnologies.TTAPI.ProductType] SupportedProductTypes 'get ' : 
+  Methods:
+    createSharedInstrSub(Product): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    get_AutospreaderProduct(): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalAutospreaderEngineOrderFeed(): PrivateScope, Public, HideBySig, SpecialName
+    get_SupportedProductTypes(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    HasInstrumentKeys(ITTDataObject): PrivateScope, Public, Static, HideBySig
+    HasProductKeys(ITTDataObject): PrivateScope, Public, Static, HideBySig
+    GetProductKeysWithOriginInfo(ITTDataObject): PrivateScope, Public, Static, HideBySig
+    GetProductKeys(ITTDataObject): PrivateScope, Public, Static, HideBySig
+    GetInstrumentKeysWithRoutingInfo(ITTDataObject): PrivateScope, Public, Static, HideBySig
+    GetInstrumentKeys(ITTDataObject): PrivateScope, Public, Static, HideBySig
+    InstrumentKeyToDataObject(IEnumerable`1, ITTDataObject&): PrivateScope, Public, Static, HideBySig
+    ProductKeyToDataObject(IEnumerable`1, ITTDataObject&): PrivateScope, Public, Static, HideBySig
+Interface TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions+ITTDataObject: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+  Methods:
+    GetData(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetData(Type): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetData(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetDataPresent(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetDataPresent(Type): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetDataPresent(String, Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFormats(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetFormats(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetData(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetData(String, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetData(Type, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetData(String, Boolean, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions+ExtractorDelegate`1[T]: AutoLayout, AnsiClass, Class, NestedAssembly, Sealed
+  Type parameter: T
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Stream): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Stream, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions+Extractor`1[TItem]: AutoLayout, AnsiClass, Class, NestedAssembly, Abstract, BeforeFieldInit
+  Type parameter: TItem
+    Void .ctor(System.String, ExtractorDelegate`1, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Format 'get set' : 
+    Boolean IsDotNetFormat 'get set' : 
+    Boolean IsGatewayBased 'get set' : 
+  Methods:
+    get_Format(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDotNetFormat(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsGatewayBased(): PrivateScope, Public, HideBySig, SpecialName
+    GetItems(ITTDataObject): PrivateScope, Public, HideBySig
+Class TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions+ProductKeyExtractor: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions+Extractor`1[TradingTechnologies.TTAPI.Internal.ClipboardSerializer+ProductKeyInfo]
+    Void .ctor(System.String, ExtractorDelegate`1, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ProductKeyExtractor[] Extractors : Public, Static
+Class TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions+InstrumentKeyExtractor: AutoLayout, AnsiClass, Class, NestedAssembly, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Internal.TTDataObjectExtensions+Extractor`1[TradingTechnologies.TTAPI.Internal.ClipboardSerializer+InstrumentKeyInfo]
+    Void .ctor(System.String, ExtractorDelegate`1, Boolean, Boolean, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    InstrumentKeyExtractor[] Extractors : Public, Static
+  Properties:
+    Boolean IsAutospreader 'get set' : 
+  Methods:
+    get_IsAutospreader(): PrivateScope, Public, HideBySig, SpecialName
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionOrFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionCompoundFilter
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    IsMatch(Order): PrivateScope, Public, Virtual, HideBySig
+    IsMatch(Fill): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+    Validate(): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+Class TradingTechnologies.TTAPI.Internal.ProductOrigin: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(TradingTechnologies.TTAPI.GatewayKey, System.Collections.Generic.IList`1[TradingTechnologies.TTAPI.GatewayKey]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    TradingTechnologies.TTAPI.IProductOrigin
+  Properties:
+    TradingTechnologies.TTAPI.GatewayKey Primary 'get set' : 
+    System.Collections.Generic.ICollection`1[TradingTechnologies.TTAPI.GatewayKey] All 'get ' : 
+  Methods:
+    get_Primary(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_All(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    AddOrigin(GatewayKey): PrivateScope, Assembly, HideBySig
+    Contains(GatewayKey): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class TradingTechnologies.TTAPI.Internal.ProductOriginStore: AutoLayout, AnsiClass, Class, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    TradingTechnologies.TTAPI.IProductOriginStore
+  Methods:
+    GetOrCreateOrigin(ProductKey, GatewayKey): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    TryGetOrigin(ProductKey, IProductOrigin&(Out)): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    AddOrigin(ProductKey, GatewayKey, IList`1): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionSiteOrderKeyFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :TradingTechnologies.TTAPI.Tradebook.TradeSubscriptionFilter
+    Void .ctor(System.String, Boolean, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String SiteOrderKey 'get ' : 
+  Methods:
+    get_SiteOrderKey(): PrivateScope, Public, HideBySig, SpecialName
+    IsEqual(TradeSubscriptionFilter): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    IsMatch(Order): PrivateScope, Public, Virtual, HideBySig
+    IsMatch(Fill): PrivateScope, Public, Virtual, HideBySig
+    Clone(): PrivateScope, Public, Virtual, HideBySig
+Class TradingTechnologies.TTAPI.Internal.ExtensionMethodsForAlgo: AutoLayout, AnsiClass, Class, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    SendOrder(TradeSubscription, OrderProfileBase, Boolean, Boolean): PrivateScope, Public, Static, HideBySig
+    SendOrder(TradeSubscription, IEnumerable`1, Boolean, Boolean): PrivateScope, Public, Static, HideBySig
+    SendOrder(Session, OrderProfileBase, Boolean, Boolean): PrivateScope, Public, Static, HideBySig
+    SendOrder(Session, IEnumerable`1, Boolean, Boolean): PrivateScope, Public, Static, HideBySig
+    GetOrderFeed(MarketCatalog, FeedConnectionKey): PrivateScope, Public, Static, HideBySig
+    GetFillFeed(MarketCatalog, FeedConnectionKey): PrivateScope, Public, Static, HideBySig
+    GetPriceFeed(MarketCatalog, FeedConnectionKey): PrivateScope, Public, Static, HideBySig
+    GetGatewayKey(Feed): PrivateScope, Public, Static, HideBySig
+    GetGatewayKey(Fill): PrivateScope, Public, Static, HideBySig
+    GetGatewayKey(Order): PrivateScope, Public, Static, HideBySig
+    GetTargetGatewayKey(Order): PrivateScope, Public, Static, HideBySig
+    GetGatewayKey(OrderProfileBase): PrivateScope, Public, Static, HideBySig
+    GetContractName(InstrumentDetails): PrivateScope, Public, Static, HideBySig
+    GetFormattedContractName(InstrumentDetails, InstrumentNameFormat): PrivateScope, Public, Static, HideBySig
+    GetSupportedProductTypes(Session, GatewayKey): PrivateScope, Public, Static, HideBySig
+    CreateProduct(Market, GatewayKey, ProductKey): PrivateScope, Public, Static, HideBySig
+    ToFeedConnectionKey(GatewayLoginInfo): PrivateScope, Public, Static, HideBySig
+    Clone(GatewayLoginInfo): PrivateScope, Public, Static, HideBySig
+Class TradingTechnologies.TTAPI.Internal.InstrumentLookupSubscriptionManagerImpl: AutoLayout, AnsiClass, Class, BeforeFieldInit
+  :TradingTechnologies.TTAPI.InstrumentLookupSubscriptionManager
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    RemoveInternalSubscription(InternalInstrumentLookupSubscription): PrivateScope, Assembly, HideBySig
+    SubmitSubscription(Subscription): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride
+    StopSubscription(Subscription): PrivateScope, Assembly, Virtual, HideBySig, CheckAccessOnOverride

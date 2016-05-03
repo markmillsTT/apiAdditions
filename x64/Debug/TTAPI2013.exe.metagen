@@ -1,0 +1,15 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly TTAPI2013, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly TradingTechnologies.TTAPI, Version=7.17.59.0, Culture=neutral, PublicKeyToken=423079b15fc884a6: 
+	hash=None, flags=None
+Assembly TradingTechnologies.TTAPI.Tradebook, Version=7.17.59.0, Culture=neutral, PublicKeyToken=423079b15fc884a6: 
+	hash=None, flags=None

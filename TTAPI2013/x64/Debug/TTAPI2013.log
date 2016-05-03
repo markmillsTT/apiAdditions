@@ -1,0 +1,20 @@
+﻿Build started 2/4/2016 2:06:34 PM.
+     1>Project "C:\Users\mmills\Documents\Visual Studio 2013\Projects\TTAPI2013\TTAPI2013.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\TTAPI2013.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /FUC:\tt\ttapi\bin\TradingTechnologies.TTAPI.dll /FUC:\tt\ttapi\bin\TradingTechnologies.TTAPI.Tradebook.dll /errorReport:prompt /clr:nostdlib TTAPIFunctions.cpp
+         TTAPIFunctions.cpp
+     1>TTAPIFunctions.cpp(1): warning C4627: '#include <string>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mmills\Documents\Visual Studio 2013\Projects\x64\Debug\TTAPI2013.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mmills\Documents\Visual Studio 2013\Projects\x64\Debug\TTAPI2013.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X64 x64\Debug\app.res
+         x64\Debug\AssemblyInfo.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\TTAPI2013.obj
+         x64\Debug\TTAPIFunctions.obj
+         "x64\Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         TTAPI2013.vcxproj -> C:\Users\mmills\Documents\Visual Studio 2013\Projects\x64\Debug\TTAPI2013.exe
+     1>Done Building Project "C:\Users\mmills\Documents\Visual Studio 2013\Projects\TTAPI2013\TTAPI2013.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.63
