@@ -26,8 +26,8 @@ namespace TTAPI_Sample_Console_PriceSubscription
     {
         static void Main(string[] args)
         {
-            string ttUserId = "RENALDS";
-            string ttPassword = "1";
+            string ttUserId = "MARK";
+            string ttPassword = "12345678";
 
             // Check that the compiler settings are compatible with the version of TT API installed
             TTAPIArchitectureCheck archCheck = new TTAPIArchitectureCheck();

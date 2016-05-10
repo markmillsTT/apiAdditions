@@ -198,6 +198,7 @@ namespace TTAPI_Samples
                 UpdateStatusBar("Drag & Drop detected.  Initializing instrument...");
                 Console.WriteLine(String.Format("TT API FindInstrument {0}", keys[0].ToString()));
 
+
                 InstrumentLookupSubscription instrRequest = new InstrumentLookupSubscription(m_TTAPI.Session, Dispatcher.Current, keys[0]);
                 instrRequest.Update += instrRequest_Completed;
                 instrRequest.Start();
@@ -233,9 +234,12 @@ namespace TTAPI_Samples
                     }
 
                     // The use of the InstrumentTradeSubscription will filter for a specific instrument
-                    m_instrumentTradeSubscription = new InstrumentTradeSubscription(m_TTAPI.Session, Dispatcher.Current, e.Instrument);
+                    m_instrumentTradeSubscription = new InstrumentTradeSubscription(m_TTAPI.Session, Dispatcher.Current, e.Instrument,
+                        true, false, true, false);
                     m_instrumentTradeSubscription.EnablePNL = true;
                     m_instrumentTradeSubscription.ProfitLossChanged += new EventHandler<ProfitLossChangedEventArgs>(instrumentTradeSubscription_ProfitLossChanged);
+                    m_instrumentTradeSubscription.OrderBookDownload += new EventHandler<OrderBookDownloadEventArgs>(instrumentTradeSubscription_OrderBookDownload);
+                    m_instrumentTradeSubscription.OrderAdded += new EventHandler<OrderAddedEventArgs>(instrumentTradeSubscription_OrderAdded);
                     m_instrumentTradeSubscription.Start();
                 }
                 catch (Exception err)
@@ -254,6 +258,28 @@ namespace TTAPI_Samples
         }
 
         #endregion
+
+        /// <summary>
+        /// Fired when OrderBook is first downloaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void instrumentTradeSubscription_OrderBookDownload(object sender, OrderBookDownloadEventArgs e)
+        {
+            Console.WriteLine("OrderBookDownload event fired - Num Orders Downloaded: " + e.Orders.Count);
+            PublishProfitLossStatistics();
+        }
+
+        /// <summary>
+        /// Fired when an order is added to the InstrumentTradeSubscription
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void instrumentTradeSubscription_OrderAdded(object sender, OrderAddedEventArgs e)
+        {
+            Console.WriteLine("OrderAdded event fired - from Instrument: " + e.Order.InstrumentDetails.Name);
+            PublishProfitLossStatistics();
+        }
 
         /// <summary>
         /// Fired when there is a change in the P&L

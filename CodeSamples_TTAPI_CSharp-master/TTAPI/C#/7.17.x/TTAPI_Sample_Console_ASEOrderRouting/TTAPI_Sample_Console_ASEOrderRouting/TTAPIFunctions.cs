@@ -433,7 +433,7 @@ namespace TTAPI_Sample_Console_ASEOrderRouting
             // A Mark Mills Production
             MarksSpreadObject[] marksSpreadObjects = allSpreads.ToArray();
             for(int i = 0; i < marksSpreadObjects.Length; i++){
-                marksSpreadObjects[i].addOrderProfile(e.Order.GetOrderProfile);
+                //marksSpreadObjects[i].addOrderProfile(e.Order.GetOrderProfile);
                 createAndSendSpread(marksSpreadObjects[i].inst1, marksSpreadObjects[i].inst2);
             }
            

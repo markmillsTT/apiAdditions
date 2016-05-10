@@ -21,8 +21,8 @@ namespace TTAPI_Sample_Console_PriceSubscription
         private object m_lock = new object();
         private InstrumentLookupSubscription m_req = null;
         private PriceSubscription m_ps = null;
-        private string m_username = "";
-        private string m_password = "";
+        private string m_username = "MARK";
+        private string m_password = "12345678";
 
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace TTAPI_Sample_Console_PriceSubscription
                 // lookup an instrument
                 m_req = new InstrumentLookupSubscription(m_apiInstance.Session, Dispatcher.Current,
                     new ProductKey(MarketKey.Cme, ProductType.Future, "ES"),
-                    "Dec13");
+                    "Jun16");
                 m_req.Update += new EventHandler<InstrumentLookupSubscriptionEventArgs>(m_req_Update);
                 m_req.Start();
             }
