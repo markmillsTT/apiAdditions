@@ -36,7 +36,9 @@ namespace XTAPI_Samples
     {
         // Declare the neccessary XTAPI objects.
 		private XTAPI.TTDropHandlerClass m_TTDropHandler = null;
-		private XTAPI.TTInstrObj m_TTInstrObj = null;
+		private XTAPI.
+            
+            Obj m_TTInstrObj = null;
 		private XTAPI.TTInstrNotifyClass m_TTInstrNotify = null;
 
         /// <summary>
